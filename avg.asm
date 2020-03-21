@@ -1,6 +1,6 @@
 .model small
 .data
- arr db 8,5,7,1,9,2,6,8,4,10
+ arr db 1,1,1,1,1,1,1,1,1,1
           avg db ?
           msg db "Average = $"      
 .code
@@ -22,13 +22,13 @@
  		inc si
  		dec cl
  		jnz repeat
- 		 div bl
+ 		div bl
  		add al,48
  		mov dl,al
  		mov ah,2h
  		int 21h
  
-mov ah,4ch
+        mov ah,4ch
  		int 21h
  
 end begin 
